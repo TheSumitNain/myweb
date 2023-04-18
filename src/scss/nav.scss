@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+
+
+.navbar {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background: rgb(243, 123, 143);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    h2 {
+        color: #caf1de;
+        font-weight: 700;
+        text-shadow: 5px 5px 5px rgb(130, 130, 130);
+
+    }
+}
+
+.logo {
+    font-family: 'Merienda One', cursive;
+    font-weight:400;
+    /* font-size: 24px; */
+    color: rgb(243, 123, 143);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    width: 75%;
+}
+
+.nav-links li {
+    color: #caf1de;
+    // background-color: #caf1de;
+    font-size: 17px;
+    padding:5px 15px;
+    margin: 15px 5px;
+    cursor: pointer;
+    transition: all .5s;
+    border-radius: 5px;
+    list-style: none;
+    text-decoration:none;
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.nav-links li:hover {
+    background-color: #caf1de;
+    color: rgb(243, 123, 143);
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+button {
+    border: none;
+    text-decoration: none;
+    font-size: 25px;
+    background: none;
+    color: #caf1de;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .nav-links li {
+        margin: 5px;
+        padding: 5px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar h2 {
+        text-shadow: none;
+    }
+
+    .logo {
+        display: flex;
+        position: absolute;
+        top: 25px;
+        left: 15px;
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links-mobile {
+        position: absolute;
+        display: block;
+        list-style: none;
+        text-decoration: none;
+        padding-left: 0;
+        padding: 10px 0;
+        box-shadow: rgba(50,50,93,0.23) 0px 50px 100px -20px, rgba(0,0,0,0.3) 0px 30px 60px -30px;
+        width: 100%;
+        background-color: white;
+        top: 80px;
+        z-index: 99;
+    }
+
+    li {
+        margin: 0;
+        width: 100%;
+        padding: 20px 0 !important;
+        transition: all 0.5s ease-in-out;
+        text-align: center;
+        color: rgb(243, 123, 143);
+        transition: all .3s;
+        font-size: 20px;
+    }
+
+    li:hover {
+        background-color: rgb(243, 123, 143);
+        color: white;
+    }
+
+    .mobile-menu-icon {
+        position: absolute;
+        display: block;
+        right: 20px;
+    }
+}
